@@ -24,5 +24,23 @@ if __FILE__ == $0
   list.delete(4)
   print "#{list}\n"     # [1, 2, 8, 7, 5, 6]
 
+  # loop
+  list.each{|val|
+    print "#{val}\n"
+  }
+
+  # 任意の条件で抽出
+  print "#{list}\n"     # [1, 2, 8, 7, 5, 6]
+  # 条件にマッチしたものを列挙
+  new_list = list.select{|v| v > 5}
+  print "#{new_list}\n"   # [8, 7, 6]
+
+  # 条件にマッチしたものを削除
+  new_list = list.reject{|v| v > 5}
+  print "#{new_list}\n"   # [1, 2, 5]
+
+  new_list = list.partition{|v| v > 5}
+  print "#{new_list}\n"   # [[8, 7, 6], [1, 2, 5]]
+
 end
 
