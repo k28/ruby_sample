@@ -2,7 +2,6 @@
 #
 #
 
-
 if __FILE__ == $0
 
   emptylist = []
@@ -41,6 +40,10 @@ if __FILE__ == $0
 
   new_list = list.partition{|v| v > 5}
   print "#{new_list}\n"   # [[8, 7, 6], [1, 2, 5]]
+
+  # その他の初期化方法
+  list2 = Array.new(3, false)
+  print "#{list2}\n"      # [false, false, false]
 
 end
 
