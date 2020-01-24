@@ -38,8 +38,18 @@ if __FILE__ == $0
   new_list = list.reject{|v| v > 5}
   print "#{new_list}\n"   # [1, 2, 5]
 
+  # 閾値でリストを分割
   new_list = list.partition{|v| v > 5}
   print "#{new_list}\n"   # [[8, 7, 6], [1, 2, 5]]
+
+  # リストの組み合わせを生成する
+  # combination          : 順序なし, 重複を許さない
+  # repeated_combination : 順序なし, 重複を許可
+  # permutation          : 順列, 重複を許さない
+  # repeated_permutation : 順列, 重複を許可
+  list.combination(5).each {|combiset|
+    puts combiset.join(",")
+  }
 
   # その他の初期化方法
   list2 = Array.new(3, false)
