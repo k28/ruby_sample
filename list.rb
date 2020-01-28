@@ -11,17 +11,23 @@ if __FILE__ == $0
   print "#{list}\n"     # [1, 2, 3, 4, 5]
   print "#{list[2]}\n"  # 3
 
+  # 追加
   list.push(6)
   print "#{list}\n"     # [1, 2, 3, 4, 5, 6]
 
   list[2] = 7
   print "#{list}\n"     # [1, 2, 7, 4, 5, 6]
 
+  # 任意の位置に追加
   list.insert(2, 8)
   print "#{list}\n"     # [1, 2, 8, 7, 4, 5, 6]
 
+  # 要素を指定して削除
   list.delete(4)
   print "#{list}\n"     # [1, 2, 8, 7, 5, 6]
+
+  # 要素が含まれるか調べる
+  puts list.include?(7) # true
 
   # loop
   list.each{|val|
