@@ -34,6 +34,11 @@ if __FILE__ == $0
     print "#{val}\n"
   }
 
+  # indexつきでループ
+  list.each_with_index{|n, idx|
+    puts "#{idx} #{n}"
+  }
+
   # 任意の条件で抽出
   print "#{list}\n"     # [1, 2, 8, 7, 5, 6]
   # 条件にマッチしたものを列挙

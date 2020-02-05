@@ -15,7 +15,7 @@ if __FILE__ == $0
   print "#{same_hash.keys}\n"     # key全て取り出し
   print "#{same_hash.values}\n"   # value全て取り出し
 
-  # Keyがあるか確認, has_value?でvalueがあるか確認もできる
+  # Keyがあるか確認(has_keyでもOK), has_value?でvalueがあるか確認もできる
   if same_hash.key?("banana")
     print "hash has banana\n"
   end

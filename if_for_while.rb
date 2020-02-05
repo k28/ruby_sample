@@ -23,6 +23,14 @@ for i in 0...5 do
 end
 
 #
+# each
+#
+(1..5).each{|i|
+  # 1, 2, 3, 4, 5
+  puts i
+}
+
+#
 # while
 #
 
