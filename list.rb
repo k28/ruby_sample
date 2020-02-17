@@ -8,8 +8,9 @@ if __FILE__ == $0
   print "#{emptylist}\n"
 
   list = [1, 2, 3, 4, 5]
-  print "#{list}\n"     # [1, 2, 3, 4, 5]
-  print "#{list[2]}\n"  # 3
+  print "#{list}\n"       # [1, 2, 3, 4, 5]
+  print "#{list[2]}\n"    # 3
+  print "#{list.size}\n"  # 5
 
   # 追加
   list.push(6)
@@ -61,6 +62,21 @@ if __FILE__ == $0
   list.combination(5).each {|combiset|
     puts combiset.join(",")
   }
+
+  # 要素を重複ありでn要素ずつに区切り、ブロックに渡して繰り返す
+  puts "each_cons"
+  list.each_cons(2){|v| p v}
+  # [1, 2]
+  # [2, 8]
+  # [8, 7]
+  # [7, 5]
+  # [5, 6]
+  # 要素をnずつ処理する
+  puts "each_slice"
+  list.each_slice(2){|v| p v}
+  # [1, 2]
+  # [8, 7]
+  # [5, 6]
 
   # その他の初期化方法
   list2 = Array.new(3, false)
