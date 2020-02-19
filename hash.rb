@@ -29,4 +29,7 @@ if __FILE__ == $0
     print "#{key} #{value}\n"
   }
 
+  # Hashの値でソートして最大の物を取得する
+  puts same_hash.max{|x, y| x[1] <=> y[1]}
+
 end

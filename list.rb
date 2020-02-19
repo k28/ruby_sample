@@ -78,6 +78,11 @@ if __FILE__ == $0
   # [8, 7]
   # [5, 6]
 
+  # リストの合計を計算する
+  puts list.inject(:+)
+  # もしくは
+  puts list.inject{|result, item| result += item}
+
   # その他の初期化方法
   list2 = Array.new(3, false)
   print "#{list2}\n"      # [false, false, false]
