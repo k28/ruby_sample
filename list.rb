@@ -9,7 +9,7 @@ if __FILE__ == $0
 
   list = [1, 2, 3, 4, 5]
   print "#{list}\n"       # [1, 2, 3, 4, 5]
-  print "#{list[2]}\n"    # 3
+  print "#{list[2]}\n"    # 3 添字に存在しないindexを指定するとnilが帰る
   print "#{list.size}\n"  # 5
 
   # 追加
@@ -86,6 +86,13 @@ if __FILE__ == $0
   # その他の初期化方法
   list2 = Array.new(3, false)
   print "#{list2}\n"      # [false, false, false]
+
+  # 2次元配列の初期化 (3 x 5の配列を0で初期化)
+  parking = Array.new(3){Array.new(5){0}}
+  # 多次元配列をDeepCopy
+  parking_deepcopy = Marshal.load(Marshal.dump(parking))
+  puts parking.inspect  # 配列をいい感じに文字列に変換
+
 
 end
 
