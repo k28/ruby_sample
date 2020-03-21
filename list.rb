@@ -8,10 +8,11 @@ if __FILE__ == $0
   print "#{emptylist}\n"
 
   list = [1, 2, 3, 4, 5]
-  print "#{list}\n"           # [1, 2, 3, 4, 5]
-  print "#{list[2]}\n"        # 3 添字に存在しないindexを指定するとnilが帰る
-  print "#{list.size}\n"      # 5
-  print "#{list.index(3)}\n"  # 2 引数の要素のIndexを探す, ないとnil
+  print "#{list}\n"            # [1, 2, 3, 4, 5]
+  print "#{list[2]}\n"         # 3 添字に存在しないindexを指定するとnilが帰る
+  print "#{list.size}\n"       # 5
+  print "#{list.index(3)}\n"   # 2 引数の要素のIndexを探す, ないとnil
+  puts  "#{[1,2,3] + [4,5,6]}" # 配列に配列を足すとつなげることが出来る
 
   # 追加
   list.push(6)
