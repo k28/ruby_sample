@@ -33,6 +33,15 @@ if __FILE__ == $0
   # 要素が含まれるか調べる
   puts list.include?(7) # true
 
+  # 要素をグループ分けする
+  list.sort.chunk{|i| i > 5 }.each{|k, v|
+    print "#{k} => #{v.inspect}\n"
+  }
+  # 前の要素から順に評価するので
+  # ソートなどしてからchunkしないと意図した結果にならないので注意
+  # false => [1, 2, 5]
+  # true => [6, 7, 8]
+
   # loop
   list.each{|val|
     print "#{val}\n"
