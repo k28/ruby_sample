@@ -14,6 +14,8 @@ if __FILE__ == $0
   print "#{list.index(3)}\n"   # 2 引数の要素のIndexを探す, ないとnil
   puts  "#{[1,2,3] + [4,5,6]}" # 配列に配列を足すとつなげることが出来る
   puts  "#{[1,2,3] << [4,5]}"  # << を使うと最後に要素を追加できる [1, 2, 3, [4, 5]]
+  puts "#{[1,2,3,4,5].take(3)}"# [1,2,3]
+  puts "#{[1,2,3,4,5].drop(3)}"# [4,5]
 
   # 追加
   list.push(6)
@@ -90,6 +92,9 @@ if __FILE__ == $0
   # [8, 7]
   # [5, 6]
 
+  # https://qiita.com/k-penguin-sato/items/420d7487b28b5d58cac4
+  puts ['a', 'b'].map(&:upcase)
+
   # リストの合計を計算する
   puts list.inject(:+)
   # もしくは
@@ -104,6 +109,9 @@ if __FILE__ == $0
   # 多次元配列をDeepCopy
   parking_deepcopy = Marshal.load(Marshal.dump(parking))
   puts parking.inspect  # 配列をいい感じに文字列に変換
+
+  # アスタリスクをつけると展開される
+  puts [*1..3]  # -> [1, 2, 3]
 
 
 end
